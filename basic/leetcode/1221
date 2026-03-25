@@ -1,0 +1,17 @@
+class Solution {
+    public int balancedStringSplit(String s) {
+        int count=0,in=0;
+
+        for(char ch:s.toCharArray()){
+
+            if(ch=='L') in++;
+            else in--;
+
+            if(in==0) count++;
+        }
+        
+        return count;
+        
+        
+    }
+}
