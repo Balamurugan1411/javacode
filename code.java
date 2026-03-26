@@ -1,0 +1,22 @@
+import java.util.*;
+import java.util.*;
+
+public class code {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        sc.close();
+        
+        int count = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            
+            // check start of a word
+            if (str.charAt(i) != ' ' && (i == 0 || str.charAt(i - 1) == ' ')) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+    }
+}
