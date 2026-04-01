@@ -1,0 +1,25 @@
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        int l1=word1.length();
+        int l2=word2.length();
+        
+        char[] s1=word1.toCharArray();
+        char[] s2=word2.toCharArray();
+        char[] str=new char[l1+l2];
+        int k=0,j=0,i=0;
+        while(i<l1&&j<l2){
+            str[k++]=s1[i++];
+            str[k++]=s2[j++];
+        }
+
+        while(i<l1){
+            str[k++]=s1[i++];
+        }
+
+        while(j<l2){
+            str[k++]=s2[j++];
+        }
+     
+     return new String(str);
+    }
+}

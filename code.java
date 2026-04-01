@@ -11,7 +11,7 @@ public class code {
 
         for (int i = 0; i < str.length(); i++) {
             
-            // check start of a word
+          
             if (str.charAt(i) != ' ' && (i == 0 || str.charAt(i - 1) == ' ')) {
                 count++;
             }
